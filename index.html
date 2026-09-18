@@ -6,18 +6,20 @@
 <title>Karima Fejjari Mesticou — Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,500;1,600&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --burgundy:#146C8C;
-    --burgundy-dark:#0F4F66;
-    --burgundy-deeper:#0A3542;
-    --blush:#EEF5F6;
-    --ink:#111A22;
-    --stone:#4A5560;
-    --stone-light:#8B98A3;
+    --burgundy:#B8935A;
+    --burgundy-dark:#9C7A46;
+    --burgundy-deeper:#0A1830;
+    --blush:#F6F1E7;
+    --ink:#14233B;
+    --stone:#5B5A52;
+    --stone-light:#9A9483;
     --paper:#FFFFFF;
-    --line:#E1E8EA;
+    --line:#E6E0D2;
+    --navy:#14233B;
+    --navy-deep:#0E1B30;
     --maxw:840px;
   }
   *{box-sizing:border-box;}
@@ -35,9 +37,9 @@
     -webkit-font-smoothing:antialiased;
   }
   h1,h2,h3,.display{
-    font-family:'Plus Jakarta Sans',sans-serif;
-    font-weight:800;
-    letter-spacing:-0.01em;
+    font-family:'Playfair Display',serif;
+    font-weight:700;
+    letter-spacing:0;
     color:var(--ink);
     margin:0;
   }
@@ -102,38 +104,44 @@
   /* ---------- HERO ---------- */
   .hero{
     position:relative; overflow:hidden;
-    padding:88px 0 96px;
-    background:
-      radial-gradient(circle, rgba(20,108,140,0.14) 1px, transparent 1px),
-      linear-gradient(180deg,var(--blush) 0%, var(--paper) 78%);
-    background-size:22px 22px, 100% 100%;
-    background-position:-6px -6px, 0 0;
+    padding:100px 0 100px;
+    background:var(--navy);
   }
   .hero-inner{
     max-width:1080px; margin:0 auto; padding:0 28px;
     position:relative; z-index:2;
   }
   .hero-rule{
-    width:56px; height:5px; background:var(--burgundy); border-radius:3px;
-    margin-bottom:22px;
+    width:56px; height:3px; background:var(--burgundy);
+    margin-bottom:26px;
   }
   .eyebrow-tag{
-    display:inline-block; font-size:0.82rem; font-weight:600;
-    color:var(--burgundy); letter-spacing:0.02em;
-    margin-bottom:18px;
+    display:inline-block; font-size:0.78rem; font-weight:700;
+    color:var(--burgundy); letter-spacing:0.14em; text-transform:uppercase;
+    margin-bottom:20px;
   }
   .hero h1{
+    color:#fff;
     font-size:clamp(2.4rem, 5vw, 3.6rem);
-    line-height:1.08; letter-spacing:-0.01em;
+    line-height:1.14; letter-spacing:0;
     max-width:26ch;
   }
+  .hero h1 .accent{
+    color:var(--burgundy); font-style:italic; font-weight:500;
+  }
   .hero-role{
-    font-family:'Plus Jakarta Sans',sans-serif; font-style:italic; font-weight:500;
+    font-family:'Playfair Display',serif; font-style:italic; font-weight:500;
     color:var(--burgundy); font-size:clamp(1.15rem,2.4vw,1.5rem);
-    margin-top:14px;
+    margin-top:16px;
+  }
+  .hero-roles{
+    margin-top:18px; display:grid; gap:4px;
+  }
+  .hero-roles span{
+    display:block; font-size:0.94rem; color:rgba(255,255,255,0.72); line-height:1.5;
   }
   .hero-lede{
-    max-width:52ch; color:var(--stone); font-size:1.08rem;
+    max-width:52ch; color:rgba(255,255,255,0.78); font-size:1.08rem;
     margin-top:22px;
   }
   .hero-cta{
@@ -155,7 +163,7 @@
     display:flex; align-items:center; gap:12px;
     background:#fff; border:1px solid var(--line); border-radius:10px;
     padding:12px 18px 12px 12px;
-    box-shadow:0 14px 30px -12px rgba(10,53,66,0.28);
+    box-shadow:0 18px 34px -12px rgba(0,0,0,0.4);
   }
   .id-badge .mono{
     width:46px; height:46px; border-radius:10px;
@@ -200,18 +208,23 @@
 
   .stat-row{
     display:flex; gap:44px; flex-wrap:wrap; margin-top:56px;
-    padding-top:32px; border-top:1px solid var(--line);
+    padding-top:32px; border-top:1px solid rgba(255,255,255,0.18);
   }
   .stat b{
-    display:block; font-family:'Plus Jakarta Sans',sans-serif; font-size:1.9rem; color:var(--burgundy);
+    display:block; font-family:'Playfair Display',serif; font-size:1.9rem; color:var(--burgundy);
     font-weight:600;
   }
-  .stat span{font-size:0.85rem; color:var(--stone); max-width:20ch; display:block; margin-top:2px;}
+  .stat span{font-size:0.85rem; color:rgba(255,255,255,0.65); max-width:20ch; display:block; margin-top:2px;}
 
   /* ---------- SECTION HEADERS ---------- */
   section{padding:84px 0;}
   section.tint{background:var(--blush);}
-  .sec-head{max-width:var(--maxw); margin:0 auto 46px; padding:0 28px;}
+  .sec-head{max-width:var(--maxw); margin:0 auto 46px; padding:0 28px; display:flex; gap:20px; align-items:flex-start;}
+  .sec-num{
+    font-family:'Playfair Display',serif; font-weight:700; font-size:2.1rem;
+    color:var(--burgundy); opacity:0.55; line-height:1.15; flex-shrink:0; padding-top:2px;
+  }
+  .sec-head-text{flex:1; min-width:0;}
   .sec-kicker{
     font-size:0.82rem; font-weight:600; color:var(--burgundy);
     margin-bottom:10px; display:block;
@@ -237,7 +250,7 @@
   }
   .pillar:first-child{border-left:none; padding-left:0;}
   .pillar .pillar-num{
-    font-family:'Plus Jakarta Sans',sans-serif; color:var(--line); font-size:0.85rem; font-weight:600;
+    font-family:'Playfair Display',serif; color:var(--burgundy); font-size:2.6rem; font-weight:700;
     margin-bottom:14px;
   }
   .pillar h3{font-size:1.2rem; margin-bottom:14px;}
@@ -280,7 +293,7 @@
     font-size:0.85rem; color:var(--stone-light); font-weight:600; white-space:nowrap;
   }
   .tl-org{
-    font-family:'Plus Jakarta Sans',sans-serif; font-style:italic; color:var(--burgundy);
+    font-family:'Playfair Display',serif; font-style:italic; color:var(--burgundy);
     font-size:1rem; margin-top:4px;
   }
   .org-row{display:flex; align-items:center; gap:10px; margin-top:6px;}
@@ -300,7 +313,7 @@
   .edu-logo-box img{max-width:100%; max-height:100%; object-fit:contain;}
   .tl-badge{
     display:inline-block; margin-top:10px; font-size:0.74rem; font-weight:600;
-    color:var(--burgundy); background:var(--blush); border:1px solid #CDE3E8;
+    color:var(--burgundy); background:var(--blush); border:1px solid #E3D3B8;
     padding:4px 10px; border-radius:7px; letter-spacing:0.01em;
   }
   .tl-body{margin-top:14px; color:var(--stone); font-size:0.97rem;}
@@ -314,17 +327,20 @@
   .tl-sub-item p{font-size:0.93rem; color:var(--stone); margin:0;}
 
   /* ---------- EDUCATION ---------- */
-  .edu-grid{max-width:var(--maxw); margin:0 auto; padding:0 28px; display:grid; gap:28px;}
+  .edu-grid{max-width:1140px; margin:0 auto; padding:0 28px; display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:start;}
+  @media (max-width:820px){ .edu-grid{grid-template-columns:1fr;} }
   .edu-card{
-    border:1px solid var(--line); border-radius:7px; padding:28px 30px;
+    border:1px solid var(--line); border-radius:8px; padding:26px 28px;
     background:var(--paper);
   }
-  .edu-top{
-    display:flex; flex-wrap:wrap; justify-content:space-between; align-items:baseline; gap:8px 20px;
+  .edu-dates{
+    display:block; font-size:0.76rem; color:var(--burgundy); font-weight:700;
+    letter-spacing:0.08em; text-transform:uppercase; margin-bottom:8px;
   }
-  .edu-top h3{font-size:1.15rem; max-width:34ch;}
-  .edu-dates{font-size:0.85rem; color:var(--stone-light); font-weight:600; white-space:nowrap;}
-  .edu-org{font-family:'Plus Jakarta Sans',sans-serif; font-style:italic; color:var(--burgundy); font-size:0.96rem; margin-top:5px;}
+  .edu-top h3{font-size:1.1rem; max-width:38ch; line-height:1.35;}
+  .edu-org{font-family:'Playfair Display',serif; font-style:italic; color:var(--burgundy); font-size:0.94rem; margin-top:5px;}
+  .edu-desc{margin-top:14px; font-size:0.92rem; color:var(--stone); line-height:1.62;}
+  .edu-detail-line{margin-top:10px; font-size:0.82rem; color:var(--stone-light); line-height:1.5;}
   .edu-highlights{
     margin-top:16px; display:grid; grid-template-columns:1fr 1fr; gap:8px 26px;
     list-style:none; padding:0;
@@ -340,6 +356,55 @@
   .edu-note{margin-top:14px; font-size:0.88rem; color:var(--stone-light); font-style:italic;}
   .edu-ellipsis{margin-top:10px; font-size:1.1rem; letter-spacing:0.12em; color:var(--stone-light);}
 
+  .scenario-card{background:var(--navy); border-radius:10px; padding:26px 26px 22px; margin-top:14px;}
+  .scenario-card h4{color:#fff; font-size:1.05rem; margin-bottom:4px; line-height:1.35;}
+  .scenario-card .sc-sub{color:rgba(255,255,255,0.65); font-size:0.82rem; margin-bottom:18px; font-style:italic;}
+  .scenario-info-grid{display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:18px;}
+  .scenario-info-grid div{padding:10px 12px; background:rgba(255,255,255,0.07); border-radius:6px; border:1px solid rgba(255,255,255,0.12);}
+  .scenario-info-grid b{display:block; font-size:0.64rem; color:var(--burgundy); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:3px;}
+  .scenario-info-grid span{font-size:0.82rem; color:rgba(255,255,255,0.85);}
+  .scenario-obj{margin:0 0 18px; padding-left:18px;}
+  .scenario-obj li{font-size:0.85rem; color:rgba(255,255,255,0.8); margin-bottom:6px;}
+  .scenario-phase{padding-left:14px; border-left:2px solid var(--burgundy); margin-bottom:14px;}
+  .scenario-phase:last-child{margin-bottom:0;}
+  .scenario-phase .ph-label{display:block; font-size:0.62rem; color:var(--burgundy); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:4px; font-weight:700;}
+  .scenario-phase h5{font-weight:700; font-size:0.88rem; color:#fff; margin:0 0 4px;}
+  .scenario-phase p{font-size:0.82rem; color:rgba(255,255,255,0.75); margin:0 0 6px; line-height:1.55;}
+  .scenario-tag{display:inline-block; font-size:0.6rem; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; color:var(--navy); background:var(--burgundy); padding:3px 8px; border-radius:4px;}
+
+  .situation-card{background:var(--navy); border-radius:10px; padding:24px 26px 22px; margin-top:22px;}
+  .situation-card .sit-num{
+    display:inline-block; font-family:'Playfair Display',serif; font-style:italic; color:var(--burgundy);
+    font-size:1.3rem; margin-bottom:6px;
+  }
+  .situation-card h4{color:#fff; font-size:1.05rem; margin-bottom:4px; line-height:1.35;}
+  .situation-card .sit-sub{color:rgba(255,255,255,0.62); font-size:0.82rem; font-style:italic; margin-bottom:18px;}
+  .situation-card>p.sit-intro{color:rgba(255,255,255,0.8); font-size:0.88rem; line-height:1.6; margin:0 0 18px;}
+  .sit-grid{display:grid; grid-template-columns:1fr 1fr; gap:10px;}
+  .sit-grid div{padding:12px 14px; background:rgba(255,255,255,0.07); border-radius:6px; border:1px solid rgba(255,255,255,0.12);}
+  .sit-grid b{display:block; font-size:0.64rem; color:var(--burgundy); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:4px;}
+  .sit-grid span{font-size:0.84rem; color:rgba(255,255,255,0.85); line-height:1.5;}
+  .sit-steps{display:grid; grid-template-columns:repeat(4,1fr); gap:10px;}
+  .sit-steps div{padding:14px 12px; background:rgba(255,255,255,0.07); border-radius:6px; border:1px solid rgba(255,255,255,0.12); text-align:center;}
+  .sit-steps .sit-step-num{display:block; font-family:'Playfair Display',serif; color:var(--burgundy); font-size:1.1rem; margin-bottom:4px;}
+  .sit-steps b{display:block; font-size:0.68rem; color:#fff; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:6px;}
+  .sit-steps span{font-size:0.78rem; color:rgba(255,255,255,0.78); line-height:1.45;}
+  @media (max-width:640px){ .sit-steps{grid-template-columns:1fr 1fr;} .sit-grid{grid-template-columns:1fr;} }
+
+  .job-structure{background:var(--navy); border-radius:10px; padding:24px 26px 22px; margin-top:16px;}
+  .job-structure .js-block{margin-bottom:20px;}
+  .job-structure .js-block:last-child{margin-bottom:0;}
+  .js-label{display:block; font-size:0.66rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--burgundy); margin-bottom:10px;}
+  .js-table{display:grid; gap:8px;}
+  .js-row{display:flex; gap:14px; font-size:0.85rem; flex-wrap:wrap;}
+  .js-row b{color:rgba(255,255,255,0.5); font-weight:500; min-width:120px; flex-shrink:0;}
+  .js-row span{color:#fff;}
+  .js-para{font-size:0.86rem; color:rgba(255,255,255,0.82); line-height:1.6; margin:0;}
+  .js-missions{margin:0; padding-left:18px;}
+  .js-missions li{font-size:0.85rem; color:rgba(255,255,255,0.82); margin-bottom:6px; line-height:1.55;}
+  .js-tags{display:flex; flex-wrap:wrap; gap:8px;}
+  .js-tag{font-size:0.74rem; padding:4px 10px; border-radius:5px; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); color:rgba(255,255,255,0.85);}
+
   .edu-quote{
     margin-top:20px; padding:16px 20px; border-left:3px solid var(--burgundy);
     background:var(--blush);
@@ -349,7 +414,7 @@
     color:var(--burgundy); text-transform:uppercase; margin-bottom:8px;
   }
   .edu-quote p{
-    font-family:'Plus Jakarta Sans',sans-serif; font-style:italic; font-size:0.97rem;
+    font-family:'Playfair Display',serif; font-style:italic; font-size:0.97rem;
     color:var(--ink); line-height:1.6; margin:0;
   }
   .edu-quote-src{
@@ -408,7 +473,7 @@
     color:var(--burgundy); text-transform:uppercase; margin-bottom:8px;
   }
   .case-study h4{
-    font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; font-size:1.08rem; color:var(--ink);
+    font-family:'Playfair Display',serif; font-weight:600; font-size:1.08rem; color:var(--ink);
     margin:0 0 16px;
   }
   .case-study-grid{display:grid; grid-template-columns:1fr 1fr; gap:16px 24px;}
@@ -440,11 +505,11 @@
 
   /* ---------- CONTACT / FOOTER ---------- */
   footer{
-    background:var(--burgundy-deeper); color:#E7F2F4; padding:72px 0 40px;
+    background:var(--burgundy-deeper); color:#E9DEC6; padding:72px 0 40px;
   }
   .footer-inner{max-width:var(--maxw); margin:0 auto; padding:0 28px;}
   footer h2{color:#fff; font-size:clamp(1.6rem,3vw,2.1rem); max-width:20ch; line-height:1.2;}
-  footer p{color:#BFDCE3; max-width:46ch; margin-top:16px; font-size:1rem;}
+  footer p{color:#D8CBB0; max-width:46ch; margin-top:16px; font-size:1rem;}
   .contact-list{margin-top:32px; display:grid; gap:12px;}
   .contact-list a, .contact-list span{
     color:#fff; font-size:1rem; font-weight:500; display:inline-block;
@@ -453,10 +518,48 @@
   .contact-list a:hover{border-color:#fff; text-decoration:none;}
   .foot-base{
     margin-top:56px; padding-top:24px; border-top:1px solid rgba(255,255,255,0.18);
-    font-size:0.8rem; color:#6E96A3; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
+    font-size:0.8rem; color:#8A7A5C; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
   }
 
   .fade-in{animation:fadeUp .7s ease both;}
+
+  .interface-box{
+    max-width:1120px; margin:48px auto 0; padding:0 28px 4px;
+  }
+  .interface-card{
+    position:relative; overflow:hidden;
+    padding:36px 36px 32px; border-radius:12px; background:var(--navy);
+  }
+  .interface-card::before{
+    content:'"'; position:absolute; top:-6px; left:24px;
+    font-family:'Playfair Display',serif; font-size:6rem; font-weight:700;
+    color:rgba(184,147,90,0.35); line-height:1; pointer-events:none;
+  }
+  .interface-card .if-tag{
+    position:relative; display:inline-block; font-size:0.72rem; font-weight:700; letter-spacing:0.1em;
+    color:var(--burgundy); text-transform:uppercase; margin-bottom:10px;
+  }
+  .interface-card h3{position:relative; font-size:1.25rem; margin-bottom:10px; color:#fff;}
+  .interface-card>p{position:relative; font-size:0.95rem; color:rgba(255,255,255,0.72); margin:0 0 24px; max-width:66ch;}
+  .interface-grid{position:relative; display:grid; grid-template-columns:repeat(4,1fr); gap:16px;}
+  .if-item{padding:16px 16px; background:rgba(255,255,255,0.06); border-radius:9px; border:1px solid rgba(255,255,255,0.14);}
+  .if-item b{display:block; font-size:0.88rem; color:var(--burgundy); margin-bottom:5px;}
+  .if-item span{font-size:0.85rem; color:rgba(255,255,255,0.78); line-height:1.5;}
+  .interface-synth{
+    position:relative; margin-top:22px; font-size:0.98rem; color:#fff; font-weight:600; line-height:1.5;
+  }
+  @media (max-width:820px){ .interface-grid{grid-template-columns:1fr 1fr;} }
+  @media (max-width:560px){ .interface-grid{grid-template-columns:1fr;} }
+
+  .traits-box{max-width:1120px; margin:24px auto 0; padding:0 28px;}
+  .traits-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:14px;}
+  .trait-item{
+    padding:16px 16px; background:#fff; border-radius:9px; border:1px solid var(--line);
+  }
+  .trait-item b{display:block; font-size:0.9rem; color:var(--ink); margin-bottom:5px;}
+  .trait-item span{font-size:0.84rem; color:var(--stone); line-height:1.5;}
+  @media (max-width:820px){ .traits-grid{grid-template-columns:1fr 1fr;} }
+  @media (max-width:560px){ .traits-grid{grid-template-columns:1fr;} }
 
   .to-top{
     position:fixed; right:24px; bottom:24px; z-index:60;
@@ -489,22 +592,19 @@
       <li><a href="#formation">Formation</a></li>
       <li><a href="#formations-continues">Formations continues</a></li>
       <li><a href="#contact">Contact</a></li>
-      <li><a href="CV_Karima_Fejjari_Mesticou.pdf" target="_blank" rel="noopener">CV (PDF)</a></li>
       <li><a href="https://www.linkedin.com/in/karima-mesticou-b89747153" target="_blank" rel="noopener">LinkedIn</a></li>
     </ul>
   </div>
 </header>
-  
-  </div>
+
+<section class="hero">
   <div class="hero-inner">
     <div class="hero-rule fade-in"></div>
-    <h1 class="fade-in">karima FEJJARI MESTICOU </h1>
-    <p class="hero-role fade-in">Recherche clinique, formation et pratique</p>
-    <p class="hero-lede fade-in">Quinze ans à porter plusieurs rôles en même temps, la pratique clinique, la recherche et la formation des praticiens. Ce qui me fait avancer, c'est de sortir de ma zone de confort et de me fixer de nouveaux objectifs, toujours dans un seul but, la sécurité et les soins aux patients.</p>
+    <h1 class="fade-in">Karima Fejjari Mesticou</h1>
+    <p class="hero-lede fade-in">Quinze ans à conjuguer plusieurs rôles, la pratique clinique, la recherche, la formation des praticiens et l'évaluation clinique de dispositifs médicaux. Une conviction structure ce parcours, sortir de sa zone de confort pour progresser, avec un repère constant, la sécurité et la qualité des soins apportés aux patients.</p>
     <div class="stat-row fade-in">
-      <div class="stat"><b>15 ans</b><span>d'expérience clinique et industrielle</span></div>
+      <div class="stat"><b>15 ans</b><span>d'expérience clinique et industrielle en dispositifs médicaux</span></div>
       <div class="stat"><b>5 ans</b><span>en cheffe de projet, recherche et communication clinique sur dispositifs médicaux</span></div>
-     
       <div class="stat"><b>6</b><span>diplômes universitaires et certificats</span></div>
     </div>
   </div>
@@ -512,41 +612,45 @@
 
 <section id="profil">
   <div class="sec-head">
+    <span class="sec-num">01</span>
+    <div class="sec-head-text">
     <span class="sec-kicker">Profil</span>
     <h2>Une pratique qui relie la clinique, la science et la pédagogie</h2>
+    </div>
   </div>
   <div class="about-body">
     <p>Je suis chirurgienne dentiste, avec un parcours qui va de la pratique clinique à la recherche, en passant par la formation des professionnels de santé.</p>
-    <p>Mon parcours s'est construit dans des environnements qui demandent de porter plusieurs sujets en parallèle, un protocole d'étude clinique, une session de formation, une analyse de cas clinique, souvent au cours d'une même semaine. Cette capacité à passer d'un rôle à l'autre, tout en gardant un fil conducteur clinique, structure chacune de mes expériences.</p>
+    <p>Mon parcours s'est construit dans des environnements qui demandent de porter plusieurs sujets en parallèle, un protocole d'étude clinique, une session de formation, une analyse de cas clinique. Cette capacité à passer d'un rôle à l'autre, tout en gardant un fil conducteur clinique, structure chacune de mes expériences.</p>
     <p>Je recherche les environnements qui me poussent au delà de mes acquis, là où la progression est la plus rapide. Je me fixe des objectifs précis et je construis les moyens de les atteindre, en gardant un repère constant, la sécurité et la qualité des soins apportés aux patients.</p>
     <p>Une constante traverse mon parcours, plusieurs des postes que j'ai occupés ont été construits autour de ce profil, à la croisée de la clinique, de la recherche et de la formation.</p>
-    <p>Cette même logique caractérise ma relation aux professionnels de santé. Formatrice technico clinique, coordinatrice de centre de formation, aujourd'hui responsable de l'évaluation clinique d'un dispositif médical, je reste en contact direct avec les praticiens que je forme et que j'accompagne. Leurs retours orientent directement l'évolution des formations, des protocoles et des produits.</p>
+    <p>Cette même logique caractérise ma relation aux professionnels de santé. Formatrice technico clinique, coordinatrice de centre de formation, aujourd'hui en charge de l'évaluation clinique d'un dispositif médical, je reste en contact direct avec les praticiens que je forme et que j'accompagne. Leurs retours orientent directement l'évolution des formations, des protocoles et des produits.</p>
   </div>
 </section>
 
 <section id="competences" class="tint">
   <div class="sec-head">
+    <span class="sec-num">02</span>
+    <div class="sec-head-text">
     <span class="sec-kicker">Compétences</span>
     <h2>Quatre piliers, un même fil conducteur</h2>
     <p>La clinique nourrit la recherche, la recherche nourrit la formation, et les trois se rejoignent dans le pilotage de projet.</p>
+    </div>
   </div>
   <div class="pillars">
     <div class="pillar">
-      <div class="pillar-num">01</div>
       <div class="pillar-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#146C8C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-2.4 0-4.2 1.7-4.2 4.3 0 1.8.5 2.6.5 4.6 0 2.6-.8 4.6-.8 6.7 0 1.2.7 2.1 1.7 2.1 1.4 0 1.6-2.4 2.1-5.2.2-1 .4-1.5.7-1.5s.5.5.7 1.5c.5 2.8.7 5.2 2.1 5.2 1 0 1.7-.9 1.7-2.1 0-2.1-.8-4.1-.8-6.7 0-2 .5-2.8.5-4.6C16.2 4.7 14.4 3 12 3Z"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="#B8935A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-2.4 0-4.2 1.7-4.2 4.3 0 1.8.5 2.6.5 4.6 0 2.6-.8 4.6-.8 6.7 0 1.2.7 2.1 1.7 2.1 1.4 0 1.6-2.4 2.1-5.2.2-1 .4-1.5.7-1.5s.5.5.7 1.5c.5 2.8.7 5.2 2.1 5.2 1 0 1.7-.9 1.7-2.1 0-2.1-.8-4.1-.8-6.7 0-2 .5-2.8.5-4.6C16.2 4.7 14.4 3 12 3Z"/></svg>
       </div>
       <h3>Clinique</h3>
       <ul>
-        <li>Chirurgie orale et pratique hospitalière (CHU de Lyon)</li>
+        <li>Chirurgie orale et pratique hospitalière</li>
         <li>Implantologie et parodontologie, diplômes universitaires dédiés</li>
         <li>Analyse de cas cliniques et aide à la décision thérapeutique</li>
       </ul>
     </div>
     <div class="pillar">
-      <div class="pillar-num">02</div>
       <div class="pillar-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#146C8C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M20 20l-5-5"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="#B8935A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M20 20l-5-5"/></svg>
       </div>
       <h3>Recherche</h3>
       <ul>
@@ -557,9 +661,8 @@
       </ul>
     </div>
     <div class="pillar">
-      <div class="pillar-num">03</div>
       <div class="pillar-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#146C8C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5C4 4.7 4.7 4 5.5 4H11v16H5.5c-.8 0-1.5-.7-1.5-1.5v-13Z"/><path d="M20 5.5c0-.8-.7-1.5-1.5-1.5H13v16h5.5c.8 0 1.5-.7 1.5-1.5v-13Z"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="#B8935A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5C4 4.7 4.7 4 5.5 4H11v16H5.5c-.8 0-1.5-.7-1.5-1.5v-13Z"/><path d="M20 5.5c0-.8-.7-1.5-1.5-1.5H13v16h5.5c.8 0 1.5-.7 1.5-1.5v-13Z"/></svg>
       </div>
       <h3>Formation</h3>
       <ul>
@@ -570,9 +673,8 @@
       </ul>
     </div>
     <div class="pillar">
-      <div class="pillar-num">04</div>
       <div class="pillar-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#146C8C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="1.5"/><path d="M9 3.5h6a1 1 0 0 1 1 1V6H8V4.5a1 1 0 0 1 1-1Z"/><path d="M8.3 12.2l2 2 3.7-4"/><path d="M8.3 17h7.4"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="#B8935A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="1.5"/><path d="M9 3.5h6a1 1 0 0 1 1 1V6H8V4.5a1 1 0 0 1 1-1Z"/><path d="M8.3 12.2l2 2 3.7-4"/><path d="M8.3 17h7.4"/></svg>
       </div>
       <h3>Pilotage de projet</h3>
       <ul>
@@ -583,28 +685,127 @@
       </ul>
     </div>
   </div>
+
+  <div class="interface-box">
+    <div class="interface-card">
+      <span class="if-tag">Compétence distinctive</span>
+      <h3>Faire dialoguer quatre univers professionnels</h3>
+      <p>Mon rôle chez MODJAW me place à l'interface entre des interlocuteurs qui ne parlent pas toujours le même langage, chacun avec ses propres priorités.</p>
+      <div class="interface-grid">
+        <div class="if-item">
+          <b>Praticiens</b>
+          <span>Usages du dispositif, questions cliniques, besoins de formation</span>
+        </div>
+        <div class="if-item">
+          <b>Recherche et développement</b>
+          <span>Besoins cliniques traduits en spécifications, retours de terrain</span>
+        </div>
+        <div class="if-item">
+          <b>Réglementaire</b>
+          <span>Exigences applicables, freins à anticiper</span>
+        </div>
+        <div class="if-item">
+          <b>Direction</b>
+          <span>Résultats, validation des projets, décisions</span>
+        </div>
+      </div>
+      <p class="interface-synth">Ma valeur ajoutée est de faire dialoguer ces quatre univers, sans perdre le fil clinique qui les relie tous.</p>
+    </div>
+  </div>
+
+  <div class="traits-box">
+    <span class="if-tag" style="color:var(--burgundy);">Savoir-être</span>
+    <div class="traits-grid">
+      <div class="trait-item">
+        <b>À l'aise dans le dialogue</b>
+        <span>Avec des interlocuteurs très différents, praticiens, partenaires, équipes techniques.</span>
+      </div>
+      <div class="trait-item">
+        <b>Écoute et médiation</b>
+        <span>Accompagne sans imposer son propre jugement à la place de celui de l'autre.</span>
+      </div>
+      <div class="trait-item">
+        <b>Pédagogie naturelle</b>
+        <span>Rend accessible ce qui est technique, face à un public hétérogène.</span>
+      </div>
+      <div class="trait-item">
+        <b>Sens de l'organisation</b>
+        <span>Pilote un projet de bout en bout jusqu'à son résultat.</span>
+      </div>
+      <div class="trait-item">
+        <b>Rigueur</b>
+        <span>Respect méthodique des protocoles et de la réglementation applicable, jusqu'au moindre détail.</span>
+      </div>
+      <div class="trait-item">
+        <b>Persévérance</b>
+        <span>Mène un projet jusqu'à son terme, y compris face aux obstacles réglementaires ou organisationnels.</span>
+      </div>
+      <div class="trait-item">
+        <b>Efficacité</b>
+        <span>Avance vite sur les sujets prioritaires, sans perdre en qualité ni en rigueur.</span>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section id="experience">
   <div class="sec-head">
+    <span class="sec-num">03</span>
+    <div class="sec-head-text">
     <span class="sec-kicker">Expérience professionnelle</span>
-    <h2>Un fil rouge, rester au contact des praticiens</h2>
-    <p>La plupart de mes postes m'ont maintenue en lien direct avec des professionnels de santé, comme formatrice, comme coordinatrice ou comme interlocutrice clinique.</p>
+    <h2>Expériences professionnelles</h2>
+    </div>
   </div>
   <div class="timeline">
 
     <div class="tl-item current">
       <div class="tl-head">
-        <h3>Cheffe de projet, recherche, communication clinique, formation</h3>
-        <span class="tl-dates">Depuis février 2021</span>
+        <h3>Cheffe de projet</h3>
+        
       </div>
-      <div class="org-row"><span class="org-badge">MJ</span><div class="tl-org">MODJAW, Villeurbanne</div></div>
-      <span class="tl-badge">Formation et accompagnement des praticiens</span>
+      
+      <div class="job-structure">
+        <div class="js-block">
+          <span class="js-label">Identification du poste</span>
+          <div class="js-table">
+            <div class="js-row"><b>Organisation</b><span>MODJAW, Villeurbanne</span></div>
+            <div class="js-row"><b>Intitulé</b><span>Cheffe de projet, recherche et communication clinique</span></div>
+            <div class="js-row"><b>Période</b><span>Depuis février 2021</span></div>
+            <div class="js-row"><b>Localisation</b><span>Villeurbanne (Auvergne-Rhône-Alpes)</span></div>
+            <div class="js-row"><b>Secteur</b><span>Dispositif médical numérique, dentisterie numérique</span></div>
+            <div class="js-row"><b>Type de contrat</b><span>Salarié</span></div>
+          </div>
+        </div>
+        <div class="js-block">
+          <span class="js-label">Contexte de la mission</span>
+          <p class="js-para">Poste officiellement intitulé Project Manager, Research and Clinical Communication, rattaché au département clinique. Il couvre cinq volets, du développement produit jusqu'au suivi client. Sur certains projets, je suis le lead, chargée de coordonner les interlocuteurs et d'organiser l'avancement.</p>
+        </div>
+        <div class="js-block">
+          <span class="js-label">Missions principales</span>
+          <ul class="js-missions">
+            <li>Développement produit, contribution aux nouvelles fonctionnalités et à l'évaluation clinique du dispositif</li>
+            <li>Recherche clinique et suivi des études universitaires</li>
+            <li>Veille scientifique et documentation</li>
+            <li>Démonstration produit et relation client</li>
+            <li>Formation des praticiens et encadrement des stagiaires</li>
+            <li>Suivi clients</li>
+          </ul>
+        </div>
+        <div class="js-block">
+          <span class="js-label">Compétences mobilisées</span>
+          <div class="js-tags">
+            <span class="js-tag">Gestion de projet</span>
+            <span class="js-tag">Réglementation DM</span>
+            <span class="js-tag">Évaluation clinique</span>
+            <span class="js-tag">Formation clinique</span>
+            <span class="js-tag">Communication scientifique</span>
+          </div>
+        </div>
+      </div>
       <div class="tl-body">
-        <p>Poste officiellement intitulé Project Manager, Research and Clinical Communication, rattaché au département clinique. Il couvre cinq volets, du développement produit jusqu'au suivi client. Sur certains projets, je suis le lead, chargée de coordonner les interlocuteurs et d'organiser l'avancement.</p>
 
         <details class="job-detail">
-          <summary><span class="chev">▾</span> Voir le détail complet du poste, missions, projet et publications</summary>
+          <summary><span class="chev">▾</span> Voir plus de détails</summary>
           <div class="job-detail-body">
         <div class="tl-sub">
           <div class="tl-sub-item">
@@ -669,6 +870,32 @@
           </div>
         </div>
 
+        <div class="situation-card">
+          <span class="sit-num">I</span>
+          <h4>Concevoir et animer une formation en dentisterie numérique</h4>
+          <p class="sit-sub">Formation de chirurgiens dentistes et accompagnement des usages</p>
+          <p class="sit-intro">L'usage d'un dispositif numérique en odontologie ne se réduit pas à la maîtrise de son interface. Le praticien doit comprendre ce que les données produites signifient pour l'analyse clinique et savoir les intégrer à son raisonnement.</p>
+          <div class="sit-grid">
+            <div><b>Objectif</b><span>Rendre le praticien capable d'utiliser le dispositif, de lire les données pertinentes et de les relier à une situation clinique.</span></div>
+            <div><b>Public</b><span>Chirurgiens dentistes présentant des niveaux d'expérience et de familiarité avec le numérique variables.</span></div>
+            <div><b>Ressources</b><span>Démonstrations, supports de présentation, cas cliniques et accompagnement direct des praticiens.</span></div>
+            <div><b>Contraintes</b><span>Complexité du contenu, hétérogénéité du public, nécessité d'éviter une formation centrée uniquement sur la technologie.</span></div>
+          </div>
+        </div>
+
+        <div class="situation-card">
+          <span class="sit-num">II</span>
+          <h4>Accompagner un praticien dans l'analyse d'un cas clinique</h4>
+          <p class="sit-sub">Médiation entre données numériques, raisonnement clinique et prise de décision</p>
+          <p class="sit-intro">L'accompagnement individuel mobilise une posture différente de l'animation d'un groupe, partir d'un besoin précis, clarifier la question clinique et aider le praticien à interpréter les informations disponibles sans se substituer à son jugement professionnel.</p>
+          <div class="sit-steps">
+            <div><span class="sit-step-num">1</span><b>Clarifier</b><span>Identifier la demande et distinguer problème technique et question clinique.</span></div>
+            <div><span class="sit-step-num">2</span><b>Observer</b><span>Repérer les données pertinentes et les éléments nécessitant vérification.</span></div>
+            <div><span class="sit-step-num">3</span><b>Interpréter</b><span>Mettre les informations en relation avec le contexte clinique.</span></div>
+            <div><span class="sit-step-num">4</span><b>Transférer</b><span>Faire expliciter ce que le praticien retiendra et réutilisera dans un autre cas.</span></div>
+          </div>
+        </div>
+
         <div class="mini-list">
           <span class="mini-list-label">Formations continues suivies chez MODJAW</span>
           <ul>
@@ -692,96 +919,293 @@
     <div class="tl-item">
       <div class="tl-head">
         <h3>Attachée de recherche clinique, coordinatrice de centre de formation</h3>
-        <span class="tl-dates">Oct. 2019 – Fév. 2021</span>
+        
       </div>
-      <div class="org-row"><span class="org-badge">CI</span><div class="tl-org">Centre d'implantologie et de chirurgie orale, Lyon</div></div>
-      <span class="tl-badge">Formation et accompagnement des praticiens</span>
-      <div class="tl-body">
-        <p>Participation à la mise en place des études cliniques, dont une étude pour l'évaluation de l'intégrité de la greffe osseuse à dix ans dans un protocole de soulevé de sinus. Organisation de la formation en implantologie et animation de soirées scientifiques avec les différents acteurs du secteur.</p>
+      
+      <div class="job-structure">
+        <div class="js-block">
+          <span class="js-label">Identification du poste</span>
+          <div class="js-table">
+            <div class="js-row"><b>Organisation</b><span>Centre d'implantologie et de chirurgie orale, Lyon</span></div>
+            <div class="js-row"><b>Intitulé</b><span>Attachée de recherche clinique, coordinatrice de centre de formation</span></div>
+            <div class="js-row"><b>Période</b><span>Oct. 2019 – Fév. 2021</span></div>
+            <div class="js-row"><b>Localisation</b><span>Lyon (Auvergne-Rhône-Alpes)</span></div>
+            <div class="js-row"><b>Secteur</b><span>Implantologie dentaire, formation continue</span></div>
+            <div class="js-row"><b>Type de contrat</b><span>Salarié</span></div>
+          </div>
+        </div>
+        <div class="js-block">
+          <span class="js-label">Contexte de la mission</span>
+          <p class="js-para">Structure spécialisée en implantologie et en chirurgie orale, associant une activité clinique à un centre de formation destiné aux praticiens. Fonction à l'interface de la recherche clinique et de la formation continue.</p>
+        </div>
+        <div class="js-block">
+          <span class="js-label">Missions principales</span>
+          <ul class="js-missions">
+            <li>Participation à la mise en place des études cliniques, dont une étude pour l'évaluation de l'intégrité de la greffe osseuse à dix ans dans un protocole de soulevé de sinus</li>
+            <li>Organisation de la formation en implantologie destinée aux chirurgiens dentistes</li>
+            <li>Animation de soirées scientifiques avec les différents acteurs du secteur</li>
+          </ul>
+        </div>
+        <div class="js-block">
+          <span class="js-label">Compétences mobilisées</span>
+          <div class="js-tags">
+            <span class="js-tag">Recherche clinique</span>
+            <span class="js-tag">Formation clinique</span>
+            <span class="js-tag">Coordination</span>
+            <span class="js-tag">Implantologie</span>
+          </div>
+        </div>
       </div>
     </div>
 
     <div class="tl-item">
       <div class="tl-head">
         <h3>Formatrice technico clinique</h3>
-        <span class="tl-dates">Juil. 2018 – Oct. 2019</span>
+        
       </div>
-      <div class="org-row"><span class="org-badge">IBS</span><div class="tl-org">IBS Implantologie, Auvergne Rhône Alpes</div></div>
-      <span class="tl-badge">Formation et accompagnement des praticiens</span>
-      <div class="tl-body">
-        <p>Support clinique pour les praticiens, organisation et animation de formations sur les implants dentaires. Suivi des retours d'expérience des utilisateurs, avec ajustement du contenu des formations suivantes selon les difficultés observées, et remontée des retours pertinents vers le développement produit. Mise en place d'études cliniques en partenariat avec des universités.</p>
+      
+      <div class="job-structure">
+        <div class="js-block">
+          <span class="js-label">Identification du poste</span>
+          <div class="js-table">
+            <div class="js-row"><b>Organisation</b><span>IBS Implantologie, Auvergne Rhône Alpes</span></div>
+            <div class="js-row"><b>Intitulé</b><span>Formatrice technico clinique</span></div>
+            <div class="js-row"><b>Période</b><span>Juil. 2018 – Oct. 2019</span></div>
+            <div class="js-row"><b>Localisation</b><span>Auvergne Rhône Alpes</span></div>
+            <div class="js-row"><b>Secteur</b><span>Implantologie dentaire</span></div>
+            <div class="js-row"><b>Type de contrat</b><span>Salarié</span></div>
+          </div>
+        </div>
+        <div class="js-block">
+          <span class="js-label">Contexte de la mission</span>
+          <p class="js-para">Entreprise d'implantologie dentaire assurant la formation technico clinique de ses praticiens utilisateurs, en lien avec des partenaires universitaires.</p>
+        </div>
+        <div class="js-block">
+          <span class="js-label">Missions principales</span>
+          <ul class="js-missions">
+            <li>Support clinique pour les praticiens, organisation et animation de formations sur les implants dentaires</li>
+            <li>Suivi des retours d'expérience des utilisateurs et ajustement du contenu des formations suivantes selon les difficultés observées</li>
+            <li>Remontée des retours pertinents vers le développement produit</li>
+            <li>Mise en place d'études cliniques en partenariat avec des universités</li>
+          </ul>
+        </div>
+        <div class="js-block">
+          <span class="js-label">Compétences mobilisées</span>
+          <div class="js-tags">
+            <span class="js-tag">Formation clinique</span>
+            <span class="js-tag">Support praticiens</span>
+            <span class="js-tag">Retour produit</span>
+            <span class="js-tag">Partenariats universitaires</span>
+          </div>
+        </div>
       </div>
     </div>
 
     <div class="tl-item">
       <div class="tl-head">
         <h3>Missions d'éducation à l'hygiène bucco dentaire</h3>
-        <span class="tl-dates">Mars 2018 – Juin 2019</span>
+        
       </div>
-      <div class="org-row"><span class="org-badge" style="font-size:0.5rem;">UFSBD</span><div class="tl-org">UFSBD Loire</div></div>
-      <div class="tl-body">
-        <p>Interventions dans les écoles et lors d'événements pour promouvoir la santé bucco dentaire.</p>
+      
+      <div class="job-structure">
+        <div class="js-block">
+          <span class="js-label">Identification du poste</span>
+          <div class="js-table">
+            <div class="js-row"><b>Organisation</b><span>UFSBD Loire</span></div>
+            <div class="js-row"><b>Intitulé</b><span>Missions d'éducation à l'hygiène bucco dentaire</span></div>
+            <div class="js-row"><b>Période</b><span>Mars 2018 – Juin 2019</span></div>
+            <div class="js-row"><b>Localisation</b><span>Loire</span></div>
+            <div class="js-row"><b>Secteur</b><span>Prévention et santé publique bucco dentaire</span></div>
+            <div class="js-row"><b>Type de contrat</b><span>Missions ponctuelles</span></div>
+          </div>
+        </div>
+        <div class="js-block">
+          <span class="js-label">Missions principales</span>
+          <ul class="js-missions">
+            <li>Interventions de prévention dans les écoles</li>
+            <li>Participation à des événements de promotion de la santé bucco dentaire</li>
+          </ul>
+        </div>
+        <div class="js-block">
+          <span class="js-label">Compétences mobilisées</span>
+          <div class="js-tags">
+            <span class="js-tag">Prévention</span>
+            <span class="js-tag">Éducation à la santé</span>
+            <span class="js-tag">Prise de parole publique</span>
+          </div>
+        </div>
       </div>
     </div>
+
 
     <div class="tl-item">
       <div class="tl-head">
         <h3>Praticienne attachée, service de chirurgie orale</h3>
-        <span class="tl-dates">Janv. – Déc. 2017</span>
+        
       </div>
-      <div class="org-row"><span class="org-badge">HEH</span><div class="tl-org">Hôpital Édouard Herriot, Hospices Civils de Lyon</div></div>
+      
+      <div class="job-structure">
+        <div class="js-block">
+          <span class="js-label">Identification du poste</span>
+          <div class="js-table">
+            <div class="js-row"><b>Organisation</b><span>Hôpital Édouard Herriot, Hospices Civils de Lyon</span></div>
+            <div class="js-row"><b>Intitulé</b><span>Praticienne attachée, service de chirurgie orale</span></div>
+            <div class="js-row"><b>Période</b><span>Janv. – Déc. 2017</span></div>
+            <div class="js-row"><b>Localisation</b><span>Lyon (Auvergne-Rhône-Alpes)</span></div>
+            <div class="js-row"><b>Secteur</b><span>Chirurgie orale hospitalière</span></div>
+            <div class="js-row"><b>Type de contrat</b><span>Praticien attaché</span></div>
+          </div>
+        </div>
+        <div class="js-block">
+          <span class="js-label">Contexte de la mission</span>
+          <p class="js-para">Service de chirurgie orale d'un hôpital universitaire des Hospices Civils de Lyon.</p>
+        </div>
+      </div>
     </div>
 
     <div class="tl-item">
       <div class="tl-head">
         <h3>Chargée de mission qualité, assistante dentaire</h3>
-        <span class="tl-dates">Sept. 2012 – Juil. 2016</span>
+        
       </div>
-      <div class="org-row"><span class="org-badge">MFL</span><div class="tl-org">MFL, Saint Étienne</div></div>
-      <div class="tl-body">
-        <p>Gestion de la démarche qualité et mise en place de protocoles pour les équipes d'assistantes dentaires. Participation à l'accord national des centres dentaires et animation de réunions. Assistance dentaire en travail à quatre mains.</p>
+      
+      <div class="job-structure">
+        <div class="js-block">
+          <span class="js-label">Identification du poste</span>
+          <div class="js-table">
+            <div class="js-row"><b>Organisation</b><span>MFL, Saint Étienne</span></div>
+            <div class="js-row"><b>Intitulé</b><span>Chargée de mission qualité, assistante dentaire</span></div>
+            <div class="js-row"><b>Période</b><span>Sept. 2012 – Juil. 2016</span></div>
+            <div class="js-row"><b>Localisation</b><span>Saint Étienne (Auvergne-Rhône-Alpes)</span></div>
+            <div class="js-row"><b>Secteur</b><span>Centres de santé dentaire</span></div>
+            <div class="js-row"><b>Type de contrat</b><span>Salarié</span></div>
+          </div>
+        </div>
+        <div class="js-block">
+          <span class="js-label">Missions principales</span>
+          <ul class="js-missions">
+            <li>Gestion de la démarche qualité et mise en place de protocoles pour les équipes d'assistantes dentaires</li>
+            <li>Participation à l'accord national des centres dentaires</li>
+            <li>Animation de réunions d'équipe</li>
+            <li>Assistance dentaire en travail à quatre mains</li>
+          </ul>
+        </div>
+        <div class="js-block">
+          <span class="js-label">Compétences mobilisées</span>
+          <div class="js-tags">
+            <span class="js-tag">Démarche qualité</span>
+            <span class="js-tag">Gestion de protocoles</span>
+            <span class="js-tag">Animation d'équipe</span>
+            <span class="js-tag">Assistance clinique</span>
+          </div>
+        </div>
       </div>
     </div>
 
     <div class="tl-item">
       <div class="tl-head">
         <h3>Chirurgie orale, assistance au bloc</h3>
-        <span class="tl-dates">Avr. – Juil. 2012</span>
+        
       </div>
-      <div class="org-row"><span class="org-badge">CD</span><div class="tl-org">Centre dentaire, Paris</div></div>
-      <div class="tl-body">
-        <p>Travail à quatre mains en chirurgie orale et assistance au bloc opératoire.</p>
+      
+      <div class="job-structure">
+        <div class="js-block">
+          <span class="js-label">Identification du poste</span>
+          <div class="js-table">
+            <div class="js-row"><b>Organisation</b><span>Centre dentaire, Paris</span></div>
+            <div class="js-row"><b>Intitulé</b><span>Chirurgie orale, assistance au bloc</span></div>
+            <div class="js-row"><b>Période</b><span>Avr. – Juil. 2012</span></div>
+            <div class="js-row"><b>Localisation</b><span>Paris</span></div>
+            <div class="js-row"><b>Secteur</b><span>Chirurgie orale</span></div>
+            <div class="js-row"><b>Type de contrat</b><span>Salarié</span></div>
+          </div>
+        </div>
+        <div class="js-block">
+          <span class="js-label">Missions principales</span>
+          <ul class="js-missions">
+            <li>Assistance en chirurgie orale, travail à quatre mains</li>
+            <li>Assistance au bloc opératoire</li>
+          </ul>
+        </div>
       </div>
     </div>
 
     <div class="tl-item">
       <div class="tl-head">
         <h3>Chirurgienne dentiste, vacations cliniques ponctuelles</h3>
-        <span class="tl-dates">2010 – 2026</span>
+        
       </div>
-      <div class="org-row"><span class="org-badge">CP</span><div class="tl-org">Cabinet privé, Monastir, Tunisie</div></div>
-      <div class="tl-body">
-        <p>Omnipratique et prothèses, lors de séjours ponctuels.</p>
+      
+      <div class="job-structure">
+        <div class="js-block">
+          <span class="js-label">Identification du poste</span>
+          <div class="js-table">
+            <div class="js-row"><b>Organisation</b><span>Cabinet privé</span></div>
+            <div class="js-row"><b>Intitulé</b><span>Chirurgienne dentiste, vacations cliniques ponctuelles</span></div>
+            <div class="js-row"><b>Période</b><span>2010 – 2026</span></div>
+            <div class="js-row"><b>Localisation</b><span>Monastir, Tunisie</span></div>
+            <div class="js-row"><b>Secteur</b><span>Cabinet dentaire privé</span></div>
+            <div class="js-row"><b>Type de contrat</b><span>Vacations ponctuelles</span></div>
+          </div>
+        </div>
+        <div class="js-block">
+          <span class="js-label">Missions principales</span>
+          <ul class="js-missions">
+            <li>Omnipratique dentaire</li>
+            <li>Prothèses</li>
+          </ul>
+        </div>
       </div>
     </div>
 
     <div class="tl-item">
       <div class="tl-head">
         <h3>Stage de sixième année</h3>
-        <span class="tl-dates">Sept. 2009 – Sept. 2010</span>
+        
       </div>
-      <div class="org-row"><span class="org-badge">FMD</span><div class="tl-org">Faculté de médecine dentaire, CHU de Monastir</div></div>
-      <div class="tl-body">
-        <p>Omnipratique, prothèses et stomatologie.</p>
+      
+      <div class="job-structure">
+        <div class="js-block">
+          <span class="js-label">Identification du poste</span>
+          <div class="js-table">
+            <div class="js-row"><b>Organisation</b><span>Faculté de médecine dentaire, CHU de Monastir</span></div>
+            <div class="js-row"><b>Intitulé</b><span>Stage de sixième année</span></div>
+            <div class="js-row"><b>Période</b><span>Sept. 2009 – Sept. 2010</span></div>
+            <div class="js-row"><b>Localisation</b><span>Monastir, Tunisie</span></div>
+            <div class="js-row"><b>Secteur</b><span>Formation clinique hospitalo-universitaire</span></div>
+            <div class="js-row"><b>Type de contrat</b><span>Stage</span></div>
+          </div>
+        </div>
+        <div class="js-block">
+          <span class="js-label">Missions principales</span>
+          <ul class="js-missions">
+            <li>Omnipratique dentaire</li>
+            <li>Prothèses</li>
+            <li>Stomatologie</li>
+          </ul>
+        </div>
       </div>
     </div>
 
     <div class="tl-item">
       <div class="tl-head">
         <h3>Stage infirmier</h3>
-        <span class="tl-dates">Juil. 2005 / Août 2006</span>
+        
       </div>
-      <div class="org-row"><span class="org-badge">CHU</span><div class="tl-org">CHU de Monastir, Tunisie</div></div>
+      
+      <div class="job-structure">
+        <div class="js-block">
+          <span class="js-label">Identification du poste</span>
+          <div class="js-table">
+            <div class="js-row"><b>Organisation</b><span>CHU de Monastir</span></div>
+            <div class="js-row"><b>Intitulé</b><span>Stage infirmier</span></div>
+            <div class="js-row"><b>Période</b><span>Juil. 2005 / Août 2006</span></div>
+            <div class="js-row"><b>Localisation</b><span>Monastir, Tunisie</span></div>
+            <div class="js-row"><b>Secteur</b><span>Milieu hospitalier</span></div>
+            <div class="js-row"><b>Type de contrat</b><span>Stage</span></div>
+          </div>
+        </div>
+      </div>
     </div>
 
   </div>
@@ -789,32 +1213,25 @@
 
 <section id="formation" class="tint">
   <div class="sec-head">
+    <span class="sec-num">04</span>
+    <div class="sec-head-text">
     <span class="sec-kicker">Formation</span>
     <h2>Une spécialisation construite diplôme après diplôme</h2>
     <p>Chaque diplôme est venu approfondir un axe clinique ou pédagogique, souvent en combinant enseignement théorique, travaux pratiques et vacations hospitalières. Les points listés pour chaque programme sont une sélection, non une liste exhaustive des cours suivis.</p>
+    </div>
   </div>
 
   <div class="edu-grid">
 
     <div class="edu-card">
-      <div class="edu-top">
-        <h3>Master 2 Sciences de l'éducation et de la formation, ingénierie du numérique dans l'enseignement supérieur et la formation d'adultes</h3>
-        <span class="edu-dates">2025 – 2026</span>
-      </div>
+      <span class="edu-dates">2025 – 2026, en cours</span>
+      <h3>Master 2 Sciences de l'éducation et de la formation, ingénierie du numérique dans l'enseignement supérieur et la formation d'adultes</h3>
       <div class="org-row"><span class="edu-logo-box"><img src="logo-caen.png" alt="Université de Caen Normandie"></span><div class="edu-org">Université de Caen Normandie, à distance</div></div>
-      <ul class="edu-highlights">
-        <li>Soixante ECTS répartis sur deux semestres</li>
-        <li>Modèles pédagogiques en ligne et scénarisation de cours</li>
-        <li>Encadrement et accompagnement à distance des apprenants</li>
-        <li>Hybridation des formations et ingénierie de formation numérique</li>
-        <li>Pilotage de projet, évaluation de dispositifs de formation</li>
-        <li>Référentiel Qualiopi et financement de la formation</li>
-        <li>Mémoire de recherche et stage avec portfolio de développement de dispositif</li>
-      </ul>
-      <p class="edu-ellipsis">…</p>
+      <p class="edu-desc">Soixante ECTS répartis sur deux semestres, entre modèles pédagogiques en ligne, scénarisation de cours, encadrement à distance des apprenants, hybridation des formations et pilotage de projet. Mémoire de recherche et stage avec portfolio de développement de dispositif.</p>
+      <p class="edu-detail-line">Directeur de mémoire, Nicolas Guirimand, MCF Université de Rouen Normandie. Jury, Solène Zablot, MCF Université de Caen Normandie.</p>
 
       <details class="job-detail">
-        <summary><span class="chev">▾</span> Voir l'extrait de mémoire et un exemple de réalisation</summary>
+        <summary><span class="chev">▾</span> Voir l'extrait de mémoire et deux exemples de réalisation</summary>
         <div class="job-detail-body">
       <div class="edu-project">
         <div class="ep-icon">
@@ -828,15 +1245,64 @@
         </div>
       </div>
 
-      <div class="edu-project">
-        <div class="ep-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
+      <div class="situation-card">
+        <span class="ep-tag" style="color:var(--burgundy);">Exemple de réalisation</span>
+        <h4>DentoBot, chatbot d'évaluation des urgences dentaires</h4>
+        <p class="sit-sub">Conçu dans le cadre du module Scénarisation et médiatisation de cours</p>
+        <div class="sit-grid">
+          <div><b>Objectif</b><span>Identifier les véritables urgences dentaires et orienter chaque patient vers la prise en charge adaptée.</span></div>
+          <div><b>Public</b><span>Patients fréquentant ou souhaitant consulter un cabinet dentaire en urgence, y compris les nouveaux patients.</span></div>
+          <div><b>Fonctionnement</b><span>Questions sur les symptômes, douleur, saignement, gonflement, choc, prothèse cassée, et sur leur degré d'urgence.</span></div>
+          <div><b>Résultat</b><span>Orientation vers un rendez-vous adapté ou des conseils immédiats, selon le degré d'urgence identifié.</span></div>
         </div>
-        <div class="ep-text">
-          <span class="ep-tag">Exemple de réalisation</span>
-          <h4>DentoBot, chatbot d'évaluation des urgences dentaires</h4>
-          <p>Conçu dans le cadre du module Scénarisation et médiatisation de cours. Le chatbot identifie les véritables urgences à partir des symptômes rapportés, douleur, saignement, gonflement, choc, prothèse cassée, et oriente le patient vers un rendez-vous adapté ou des conseils immédiats.</p>
-          <a class="ep-link" href="DentoBot.pdf" target="_blank" rel="noopener">Voir la fiche projet (PDF) →</a>
+        <p style="margin-top:16px;"><a class="ep-link" href="DentoBot.pdf" target="_blank" rel="noopener" style="color:var(--burgundy); font-weight:600; font-size:0.85rem;">Voir la fiche projet (PDF) →</a></p>
+      </div>
+
+      <div class="scenario-card">
+        <span class="ep-tag" style="color:var(--burgundy);">Exemple de réalisation</span>
+        <h4>Formation à l'analyse occlusale et au diagnostic en dentisterie numérique</h4>
+        <p class="sc-sub">Module hybride, conçu dans le cadre de la formation en ingénierie pédagogique</p>
+        <div class="scenario-info-grid">
+          <div><b>Public visé</b><span>Chirurgiens dentistes, niveau mixte</span></div>
+          <div><b>Format</b><span>Hybride, un présentiel, deux sessions en ligne, ressources à distance</span></div>
+          <div><b>Durée totale</b><span>Environ 7 à 8 heures sur 3 semaines</span></div>
+          <div><b>Effectif</b><span>Individuel ou petit groupe, 2 à 4 praticiens</span></div>
+        </div>
+        <ul class="scenario-obj">
+          <li>Utiliser le dispositif pour enregistrer et analyser la cinématique mandibulaire d'un patient</li>
+          <li>Interpréter les données occlusales produites pour élaborer un diagnostic</li>
+          <li>Relier les données numériques à un raisonnement clinique structuré, analyse occlusale et plan de traitement</li>
+          <li>Intégrer le dispositif dans le flux de travail numérique du cabinet, de façon autonome et réfléchie</li>
+        </ul>
+        <div class="scenario-phase">
+          <span class="ph-label">Phase 1, avant le présentiel</span>
+          <h5>Ressources préparatoires à distance</h5>
+          <p>Vidéo de présentation du dispositif, fiche de synthèse des notions d'occlusodontie mobilisées, auto questionnaire de positionnement sur les connaissances préalables, pour éviter la surcharge cognitive le jour du présentiel.</p>
+          <span class="scenario-tag">Distanciel, ressources asynchrones</span>
+        </div>
+        <div class="scenario-phase">
+          <span class="ph-label">Phase 2, journée présentielle, environ 3 heures</span>
+          <h5>Prise en main, démonstration et analyse guidée d'un cas</h5>
+          <p>Accueil et recueil des attentes, démonstration au fauteuil de la prise d'enregistrement, prise en main guidée sur un cas réel ou simulé, analyse commentée des données produites, débriefing collectif orienté vers le raisonnement clinique.</p>
+          <span class="scenario-tag">Présentiel synchrone</span>
+        </div>
+        <div class="scenario-phase">
+          <span class="ph-label">Phase 3, session en ligne 1, 1 heure</span>
+          <h5>Analyse d'un cas apporté par le praticien</h5>
+          <p>Le praticien partage en visioconférence un cas issu de sa propre pratique, analysé selon la démarche en quatre temps, clarifier, observer, interpréter, transférer, avec un accent mis sur l'autonomisation progressive.</p>
+          <span class="scenario-tag">Distanciel synchrone</span>
+        </div>
+        <div class="scenario-phase">
+          <span class="ph-label">Phase 4, ressources intermédiaires</span>
+          <h5>Fiches outils et cas à analyser en autonomie</h5>
+          <p>Mise à disposition de deux à trois cas cliniques anonymisés à analyser en autonomie, d'une fiche de lecture des données et d'un guide de rédaction du diagnostic.</p>
+          <span class="scenario-tag">Distanciel, ressources asynchrones</span>
+        </div>
+        <div class="scenario-phase">
+          <span class="ph-label">Phase 5, session en ligne 2, 1 heure</span>
+          <h5>Bilan, correction et transfert</h5>
+          <p>Retour sur les cas analysés en autonomie, identification des points de réussite et des axes d'amélioration, discussion sur l'intégration du dispositif dans le flux de travail quotidien, autoévaluation finale à partir d'une grille critériée.</p>
+          <span class="scenario-tag">Distanciel synchrone</span>
         </div>
       </div>
         </div>
@@ -844,54 +1310,26 @@
     </div>
 
     <div class="edu-card">
-      <div class="edu-top">
-        <h3>Certificat d'attaché de recherche clinique</h3>
-        <span class="edu-dates">2019 – 2020</span>
-      </div>
+      <span class="edu-dates">2019 – 2020</span>
+      <h3>Certificat d'attaché de recherche clinique</h3>
       <div class="org-row"><span class="edu-logo-box"><img src="logo-supsante.jpg" alt="Sup Santé Lyon"></span><div class="edu-org">Sup Santé Lyon</div></div>
-      <ul class="edu-highlights">
-        <li>Méthodologie des essais cliniques et essais épidémiologiques</li>
-        <li>Visites de monitoring et coordination des essais</li>
-        <li>Data management, e-CRF, biostatistique appliquée</li>
-        <li>Réglementation, pharmacovigilance et dispositifs médicaux</li>
-        <li>Anglais scientifique renforcé</li>
-        <li>Panorama de domaines thérapeutiques variés, cardiologie, oncologie, neurologie, gériatrie</li>
-      </ul>
-      <p class="edu-ellipsis">…</p>
+      <p class="edu-desc">Gestion complète du cycle d'un essai clinique, de la conception du protocole à la clôture de l'étude. Réglementation applicable aux essais cliniques (loi Jardé, ICH-GCP), pharmacovigilance, gestion documentaire et traçabilité. Coordination entre investigateurs, promoteurs et autorités compétentes, dans le respect des Bonnes Pratiques Cliniques.</p>
       <p class="edu-note">Formation conclue par un forum professionnel à Paris.</p>
     </div>
 
     <div class="edu-card">
-      <div class="edu-top">
-        <h3>Diplôme universitaire de parodontologie en pratique clinique</h3>
-        <span class="edu-dates">2016 – 2017</span>
-      </div>
+      <span class="edu-dates">2016 – 2017</span>
+      <h3>Diplôme universitaire de parodontologie en pratique clinique</h3>
       <div class="org-row"><span class="edu-logo-box"><img src="logo-marseille.png" alt="Faculté d'Odontologie, Aix-Marseille Université"></span><div class="edu-org">Université de Marseille, Dr V. Monnet-Corti</div></div>
-      <ul class="edu-highlights">
-        <li>Diagnostic et plan de traitement des maladies parodontales</li>
-        <li>Chirurgie parodontale, lambeaux de débridement, chirurgie osseuse</li>
-        <li>Techniques régénératrices, greffes osseuses, membranes</li>
-        <li>Liens entre parodontologie, prothèse, orthodontie et implantologie</li>
-        <li>Travaux pratiques sur mâchoires de porc, cas cliniques</li>
-      </ul>
-      <p class="edu-ellipsis">…</p>
+      <p class="edu-desc">Approfondissement du diagnostic parodontal et des décisions thérapeutiques en approche pluridisciplinaire. Maîtrise des techniques chirurgicales parodontales, des protocoles de maintenance et des relations entre parodonte et occlusion. Travaux pratiques sur des cas cliniques complexes intégrant restauration et implantologie.</p>
       <p class="edu-note">Participation au congrès national de la Société Française de Parodontologie et d'Implantologie Orale, à Toulouse.</p>
     </div>
 
     <div class="edu-card">
-      <div class="edu-top">
-        <h3>Diplôme interuniversitaire en anatomie et implantologie, prothèses et techniques implantaires</h3>
-        <span class="edu-dates">2014 – 2015</span>
-      </div>
+      <span class="edu-dates">2014 – 2015</span>
+      <h3>Diplôme interuniversitaire en anatomie et implantologie, prothèses et techniques implantaires</h3>
       <div class="org-row"><span class="edu-logo-box"><img src="logo-lyonest.jpg" alt="Faculté de Médecine Lyon-Est"></span><div class="edu-org">Université de Lyon 1 / Université de Saint Étienne, Dr Grammatica, Dr Veyre</div></div>
-      <ul class="edu-highlights">
-        <li>Bases anatomiques et dissection au laboratoire d'anatomie</li>
-        <li>Vacations cliniques hebdomadaires au service de chirurgie maxillo faciale du Centre Hospitalier Lyon Sud</li>
-        <li>Ateliers pratiques sur plusieurs systèmes implantaires, Dentsply, Nobel, Biotech, Zimmer</li>
-        <li>Techniques avancées, greffes osseuses, implants zygomatiques et ptérygoïdiens, chirurgie guidée</li>
-        <li>Complications et suivi, péri-implantite, prothèse sur implants</li>
-      </ul>
-      <p class="edu-ellipsis">…</p>
+      <p class="edu-desc">Acquisition des bases anatomiques chirurgicales indispensables à la pratique implantaire, anatomie des sites osseux, gestion des risques peropératoires, sélection des implants et des prothèses. Protocoles de pose, gestion des complications, intégration de l'implantologie dans le plan de traitement global. Vacations cliniques supervisées au service de chirurgie maxillo faciale du Centre Hospitalier Lyon Sud.</p>
 
       <details class="job-detail">
         <summary><span class="chev">▾</span> Voir l'extrait de mémoire</summary>
@@ -912,34 +1350,17 @@
     </div>
 
     <div class="edu-card">
-      <div class="edu-top">
-        <h3>Certificat d'études supérieures en parodontologie</h3>
-        <span class="edu-dates">2012 – 2013</span>
-      </div>
+      <span class="edu-dates">2012 – 2013</span>
+      <h3>Certificat d'études supérieures en parodontologie</h3>
       <div class="org-row"><span class="edu-logo-box"><img src="logo-lyon1.png" alt="Université Claude Bernard Lyon 1"></span><div class="edu-org">Université de Lyon 1, Dr Grosgogeat</div></div>
-      <ul class="edu-highlights">
-        <li>Biomatériaux implantables et tissus osseux</li>
-        <li>Diagnostic parodontal, sondage, facteurs de risque</li>
-        <li>Thérapeutiques non chirurgicales et chirurgicales de la poche parodontale</li>
-        <li>Chirurgie muco gingivale et parodontie implantaire</li>
-        <li>Maintenance et évolution de la maladie parodontale</li>
-      </ul>
-      <p class="edu-ellipsis">…</p>
+      <p class="edu-desc">Acquisition des fondements théoriques en parodontologie fondamentale et clinique, biologie du parodonte, classification des maladies parodontales, mécanismes de l'inflammation. Biomatériaux utilisés en régénération tissulaire guidée, principes des greffes osseuses et des substituts. Base théorique approfondie pour la pratique chirurgicale ultérieure.</p>
     </div>
 
     <div class="edu-card">
-      <div class="edu-top">
-        <h3>Diplôme de docteur en médecine dentaire</h3>
-        <span class="edu-dates">2004 – 2011</span>
-      </div>
+      <span class="edu-dates">2004 – 2011</span>
+      <h3>Diplôme de docteur en médecine dentaire</h3>
       <div class="org-row"><span class="edu-logo-box"><img src="logo-monastir.png" alt="Faculté de Médecine Dentaire de Monastir"></span><div class="edu-org">Faculté de médecine dentaire de Monastir, Tunisie</div></div>
-      <ul class="edu-highlights">
-        <li>Six années d'études, entre cours magistraux, travaux pratiques, travaux dirigés et vacations cliniques</li>
-        <li>Stage infirmier au CHU de Monastir</li>
-        <li>Stage clinique de sixième année, en omnipratique, prothèses et stomatologie</li>
-        <li>Thèse avec félicitations du jury</li>
-      </ul>
-      <p class="edu-ellipsis">…</p>
+      <p class="edu-desc">Formation clinique complète couvrant l'ensemble des disciplines de l'odontologie, chirurgie orale, endodontie, parodontologie, prothèse fixe et amovible, pédodontie, radiologie dentaire. Initiation à la démarche de recherche clinique à travers la rédaction d'une thèse récompensée par les félicitations du jury.</p>
     </div>
 
   </div>
@@ -947,7 +1368,10 @@
 
 <section id="formations-continues">
   <div class="sec-head">
+    <span class="sec-num">05</span>
+    <div class="sec-head-text">
     <h2>Formations continues</h2>
+    </div>
   </div>
   <div class="timeline">
     <details class="job-detail">
@@ -1007,18 +1431,18 @@
 
 <footer id="contact">
   <div class="footer-inner">
-    <span class="eyebrow-tag" style="color:#8FC4D1;">Contact</span>
+    <span class="eyebrow-tag" style="color:#D9BE8C;">Contact</span>
     <h2>Construisons la suite de mon parcours ensemble</h2>
     <p>Basée à Saint Étienne, ouverte au Rhône et à la Loire.</p>
     <a href="mailto:votre.email@exemple.com" class="btn btn-solid" style="margin-top:28px; background:#fff; color:var(--burgundy-deeper); border-color:#fff;">M'écrire</a>
     <div class="contact-icon-row">
       <div class="c-row">
         <span class="c-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
-        <a href="mailto:votre.email@exemple.com">fejjari_karima@hotmail.fr</a>
+        <a href="mailto:votre.email@exemple.com">votre.email@exemple.com</a>
       </div>
       <div class="c-row">
         <span class="c-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8Z"/></svg></span>
-        <span class="c-val">+33608897771</span>
+        <span class="c-val">Téléphone à compléter</span>
       </div>
       <div class="c-row">
         <span class="c-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7.5 10.5v6M7.5 7.8v.01M12 16.5v-4c0-1.2.8-2 2-2s2 .8 2 2v4M12 12.5v4"/></svg></span>
